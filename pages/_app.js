@@ -1,7 +1,7 @@
-import '../styles/globals.css'
+import React from "react";
+import { wrapper } from "../redux/index";
+import "../antd.css";
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
-}
+const MyApp = ({ Component, pageProps }) => <Component {...pageProps} />;
 
-export default MyApp
+export default wrapper.withRedux(MyApp);
